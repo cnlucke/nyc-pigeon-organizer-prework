@@ -20,16 +20,18 @@
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   attribute_holder = {}
-  trait_holder = {}
+  trait_holder = ""
+  trait_hash = {}
 
   data.each do |attribute, values|
     attribute_holder = attribute
     values.each do |trait, pigeons|
-      trait_holder = {attribute => [trait.to_s]}
+      trait_holder = trait
+      trait_hash = {attribute => [trait.to_s]}
 
       pigeons.each do |pigeon|
         if pigeon_list.has_key?(pigeon)
-          pigeon_list[pigeon].merge!(trait_holder)
+          pigeon_list[pigeon] << trait_holder
         else
           pigeon_list[pigeon] = {}
           pigeon_list[pigeon].merge!(trait_holder)
