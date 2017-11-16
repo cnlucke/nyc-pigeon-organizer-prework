@@ -35,7 +35,7 @@ def nyc_pigeon_organizer(data)
         end
         if pigeon_list.has_key?(pigeon)
           if pigeon_list[pigeon].has_key?(trait_holder)
-            (pigeon_list[pigeon][trait_holder]).push(*trait_hash[trait_holder])
+            (pigeon_list[pigeon][trait_holder]).push(trait_hash[trait_holder])
           else
             pigeon_list[pigeon][trait_holder] = []
             pigeon_list[pigeon][trait_holder] = trait_hash[trait_holder]
