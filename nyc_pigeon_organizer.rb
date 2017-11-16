@@ -24,12 +24,15 @@ def nyc_pigeon_organizer(data)
 
   data.each do |attribute, values|
     attribute_holder = attribute
-    values.each do |trait, pigeon|
+    values.each do |trait, pigeons|
       trait_holder = {attribute => trait}
-      if pigeon_list.has_key?(pigeon)
-        pigeon_list[pigeon].merge(trait_holder)
-      else
-        pigeon_list[pigeon] = {}
+
+      pigeons.each do |pigeon|
+        if pigeon_list.has_key?(pigeon)
+          pigeon_list[pigeon].merge(trait_holder)
+        else
+          pigeon_list[pigeon] = {}
+        end
       end
     end
   end
