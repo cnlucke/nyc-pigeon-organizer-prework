@@ -33,6 +33,7 @@ def nyc_pigeon_organizer(data)
           pigeon_list[pigeon].merge!(trait_holder)
         else
           pigeon_list[pigeon] = {}
+          pigeon_list[pigeon].merge!(trait_holder)
         end
       end
     end
