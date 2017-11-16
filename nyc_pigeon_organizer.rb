@@ -31,8 +31,13 @@ def nyc_pigeon_organizer(data)
 
       pigeons.each do |pigeon|
         if pigeon_list.has_key?(pigeon)
-          pigeon_list[pigeon][trait_holder] = []
-          pigeon_list[pigeon][trait_holder] + trait_hash[trait_holder]
+          if pigeon_list[pigeon].has_key?(trait_holder)
+            pigeon_list[pigeon][trait_holder] + trait_hash[trait_holder]
+          else
+            pigeon_list[pigeon][trait_holder] = []
+            pigeon_list[pigeon][trait_holder] = trait_hash[trait_holder]
+
+          end
         else
           pigeon_list[pigeon] = {}
           pigeon_list[pigeon][trait_holder] = []
