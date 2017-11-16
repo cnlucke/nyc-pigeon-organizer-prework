@@ -34,7 +34,7 @@ def nyc_pigeon_organizer(data)
           pigeon_list[pigeon] + trait_hash[trait_holder]
         else
           pigeon_list[pigeon] = {}
-          pigeon_list[pigeon].merge!(trait_holder)
+          pigeon_list[pigeon] + trait_hash[trait_holder]
         end
       end
     end
