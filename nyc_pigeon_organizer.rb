@@ -31,7 +31,7 @@ def nyc_pigeon_organizer(data)
 
       pigeons.each do |pigeon|
         if pigeon == "Theo"
-          puts "Pigeon is #{pigeon} and trait_holder is #{trait_holder} and trait_hash is #{trait_hash}"
+          puts "Pigeon is #{pigeon} and trait_hash[trait_holder] is #{trait_hash[trait_holder]}"
         end
         if pigeon_list.has_key?(pigeon)
           if pigeon_list[pigeon].has_key?(trait_holder)
