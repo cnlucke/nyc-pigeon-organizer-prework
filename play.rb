@@ -1,4 +1,4 @@
-pigeon_data = {
+PIGEON_DATA = {
   :color => {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
     :grey => ["Theo", "Peter Jr.", "Ms. K"],
