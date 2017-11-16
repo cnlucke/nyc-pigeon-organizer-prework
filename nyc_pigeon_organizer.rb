@@ -38,16 +38,16 @@ def nyc_pigeon_organizer(data)
         end
         if pigeon_list.has_key?(pigeon)
           if pigeon_list[pigeon].has_key?(attribute_holder)
-            (pigeon_list[pigeon][attribute_holder]) << trait_hash[attribute_holder]
+            (pigeon_list[pigeon][attribute_holder]) << trait_hash[attribute_holder][0]
           else
             pigeon_list[pigeon][attribute_holder] = []
-            pigeon_list[pigeon][attribute_holder] << trait_hash[attribute_holder]
+            pigeon_list[pigeon][attribute_holder] << trait_hash[attribute_holder][0]
 
           end
         else
           pigeon_list[pigeon] = {}
           pigeon_list[pigeon][attribute_holder] = []
-          pigeon_list[pigeon][attribute_holder] << trait_hash[attribute_holder]
+          pigeon_list[pigeon][attribute_holder] << trait_hash[attribute_holder][0]
         end
       end
     end
