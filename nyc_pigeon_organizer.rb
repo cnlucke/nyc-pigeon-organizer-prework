@@ -26,7 +26,7 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute, values|
     attribute_holder = attribute
     values.each do |trait, pigeons|
-      trait_holder = trait
+      trait_holder = attribute
       trait_hash = {attribute => [trait.to_s]}
 
       pigeons.each do |pigeon|
