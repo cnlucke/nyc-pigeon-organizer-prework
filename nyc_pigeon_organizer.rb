@@ -30,7 +30,7 @@ def nyc_pigeon_organizer(data)
       pigeons.each do |pigeon|
         if pigeon_list.has_key?(pigeon)
           puts "Pigeon is #{pigeon} and trait_holder is #{trait_holder}"
-          pigeon_list[pigeon].merge(trait_holder)
+          pigeon_list[pigeon].merge!(trait_holder)
         else
           pigeon_list[pigeon] = {}
         end
