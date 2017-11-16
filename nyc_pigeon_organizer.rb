@@ -46,8 +46,8 @@ def nyc_pigeon_organizer(data)
           end
         else
           pigeon_list[pigeon] = {}
-          pigeon_list[pigeon][trait_holder] = []
-          pigeon_list[pigeon][trait_holder] << trait_hash[attribute_holder]
+          pigeon_list[pigeon][attribute_holder] = []
+          pigeon_list[pigeon][attribute_holder] << trait_hash[attribute_holder]
         end
       end
     end
