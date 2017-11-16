@@ -25,22 +25,23 @@ def nyc_pigeon_organizer(data)
 
   data.each do |attribute, values|
     attribute_holder = attribute
+    puts "ATTR: #{attribute}"
     values.each do |trait, pigeons|
-      trait_holder = attribute
+      trait_holder = trait
       trait_hash = {attribute => [trait.to_s]}
 
       pigeons.each do |pigeon|
         if pigeon == "Theo"
-          puts "Pigeon is #{pigeon} and trait_hash[trait_holder] is #{trait_hash[trait_holder]}"
+          puts "Pigeon is #{pigeon} and trait_hash[attribute_holder] is #{trait_hash[attribute_holder]}"
           puts "pigeon_list[pigeon] is #{(pigeon_list[pigeon])}"
           puts
         end
         if pigeon_list.has_key?(pigeon)
-          if pigeon_list[pigeon].has_key?(trait_holder)
-            (pigeon_list[pigeon][trait_holder]) << trait_hash[trait_holder]
+          if pigeon_list[pigeon].has_key?(attribute_holder)
+            (pigeon_list[pigeon][attribute_holder]) << trait_hash[attribute_holder]
           else
-            pigeon_list[pigeon][trait_holder] = []
-            pigeon_list[pigeon][trait_holder] = trait_hash[trait_holder]
+            pigeon_list[pigeon][attribute_holder] = []
+            pigeon_list[pigeon][attribute_holder] = trait_hash[attribute_holder]
 
           end
         else
